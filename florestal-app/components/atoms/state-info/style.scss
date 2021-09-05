@@ -1,0 +1,8 @@
+.state{
+    padding: 5px 10px;
+    border-radius: 10px;
+    &-with-background{
+        background-color: $secondary;
+        display: block;
+    }
+}
