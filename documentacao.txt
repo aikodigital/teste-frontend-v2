@@ -1,0 +1,60 @@
+Olá a todos da Aiko, obrigado pela oportunidade!
+
+deixarei aqui esta pequena documentação simples sobre um pouco do projeto, detalhes e considerações.
+
+#Tecnologias & bibliotecas:
+
+    Vuejs V2,
+    Eslint,
+    Leaflet,
+    momentJS,
+    vuetify,
+    vue-router
+
+    Utilizei um build padrão v2 do Vuejs com o Eslint acoplado,
+    Leaflet por recomendação da equipe,
+    momentJs para para ajudar a trabalhar com datas,
+    Vuetify para adicionar responsividade e criar o layout,
+    vue-router para  gestao de rotas entre as páginas,
+
+#Telas:
+    Landing Page,
+    Principal - Home,
+    Erro - Página não encontrada,
+
+# Estrutura
+
+    Por ter pouco escopo, apenas separei o conteúdo das views e das rotas do padrão
+    Fiz apenas 2 componentes para lidar com as features, poderia ter separado em 3
+    mas como a tabela e o mapa tem função bastante agragada resolvi deixar los juntos
+    e apenas separar o conteudo da lista dinâmica.
+
+    Por ter pouca mutabilidade e poucas propriedades descartei o uso do Vuex
+    e utilizei os eventos de referência do próprio vue optei por deixar a arquitetura
+    o mais simples possível.
+
+# Estilização:
+
+    Deixei apenas o layout organizado e sem muito apelo em efeitos dando enfasê em
+    cumprir as features requisitadas e em deixar o conteúdo de interação o mais simples
+    e resumido que pude.
+
+#Dicas de uso:
+
+    Na página do mapa utilizei efeito mouseOver para mostrar o poupup contendo os dados
+    que são listados na tabela de equipamentos, ao clickar no marcador será mostrado a 
+    lista de estados e informações do equipamento, contendo: rentabilidade, produtividade
+    e datas que o equipamento possui registros, no botão verde é possivel ver no mapa o
+    trajeto feito no dia, seu ponto inicial e final durante o dia, assim como uma rota simples
+    entre seus pontos, ao clickar em qualquer marador a lista será chamada de volta para que
+    seja possível escolher outra data, quanto aos marcadores tive a ideia de criar uma função
+    de cores dinâmicas para diferenciar cada equipamento( pensei nisso pois não encontrei icones
+    que me agradassem e ficassem uniformes entre si ), então resolvi desta forma simples,
+    a borda do marcador é colorida com o estado atual do equipamento com os hexadecimais sugeridos
+    no documento.
+
+# Considerações:
+    Eu sei que o projeto ficou bem simples, muito mais do que eu gostaria e que eu tenho muito a 
+    me desenvolver ainda e melhorar mas me dediquei para conseguir cumprir este desafio, apesar de
+    ter tido algumas dificuldades relacionadas a tempo, gostaria de agradecer novamente a toda equipe,
+    da aiko, pela oportunidade e atenção, e se possível um feedback.
