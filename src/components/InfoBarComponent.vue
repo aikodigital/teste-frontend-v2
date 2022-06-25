@@ -1,6 +1,6 @@
 <template>
   <section class="infobar">
-    <div class="infobar__dados">
+    <div v-show="mostrar_infobar" class="infobar__dados">
       <h2>Nome equipamento</h2>
       <p>Modelo do equipamento</p>
       <h3>Posição atual</h3>
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="box-open-infobar">
-      <button class="box-open-infobar__button">
+      <button @click="AbreInfobar" class="box-open-infobar__button">
         <img src="../assets/img/seta-lado-direito.svg" class="image-arrow"/>
       </button>
     </div>
@@ -22,6 +22,16 @@
 
 export default {
   name: 'InfoBarComponent',
+  data() {
+    return {
+      mostrar_infobar: 'Boolean',
+    };
+  },
+  methods: {
+    AbreInfobar() {
+      this.mostrar_infobar = !this.mostrar_infobar;
+    },
+  },
 };
 </script>
 
