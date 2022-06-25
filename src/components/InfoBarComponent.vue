@@ -1,39 +1,59 @@
 <template>
-  <section class="info-bar">
-    <span class="material-symbols-outlined">
-      chevron_right
-    </span>
-    <h1>Nome equipamento</h1>
-    <h2>Modelo do equipamento</h2>
-    <h3>Posição atual</h3>
-    <h3>Estado do equipamento</h3>
-    <button>Histórico de posiçoes</button>
-    <button>Histórico de estados</button>
+  <section class="infobar">
+    <div class="infobar__dados">
+      <h2>Nome equipamento</h2>
+      <p>Modelo do equipamento</p>
+      <h3>Posição atual</h3>
+      <h3>Estado do equipamento</h3>
+      <div>
+        <button>Histórico de posiçoes</button>
+        <button>Histórico de estados</button>
+      </div>
+    </div>
+    <div class="box-open-infobar">
+      <button class="box-open-infobar__button">
+        <img src="../assets/img/seta-lado-direito.svg" class="image-arrow"/>
+      </button>
+    </div>
   </section>
 </template>
 
 <script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 export default {
   name: 'InfoBarComponent',
 };
 </script>
 
 <style scoped>
-  .info-bar{
+  .infobar{
     display: flex;
-    flex-direction: column;
-    padding-left: 1%;
     height: 100%;
     width:30%;
-    background-color: rgb(235, 227, 227);
     border-radius: 15px 0 0 15px;
+    align-items: center;
   }
-  .material-symbols-outlined{
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
+  .infobar__dados{
+    height: 100%;
+    background-color: rgba(235, 227, 227, 0.74);
+    padding-left: 1%;
+    border-radius: 15px 0 0 15px;
+    width:90%;
+  }
+  .box-open-infobar{
+    height:8%;
+    width: 6%;
+  }
+  .box-open-infobar__button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    box-shadow: 0 5px 5px 0 rgba(117, 112, 112, 0.493);
+  }
+  .image-arrow{
+    width: 100%;
+    height: 100%;
+  }
 </style>
