@@ -1,17 +1,26 @@
 <template>
   <section class="infobar">
     <div v-show="mostrar_infobar" class="infobar__dados">
-      <h2>Nome equipamento</h2>
-      <p>Modelo do equipamento</p>
-      <h3>Posição atual</h3>
-      <h3>Estado do equipamento</h3>
       <div>
+        <h2>Nome equipamento</h2>
+        <p>Modelo do equipamento</p>
+        <hr>
+      </div>
+      <div>
+        <h3>Posição atual</h3>
+        <hr>
         <button>Histórico de posiçoes</button>
+      </div>
+      <div>
+        <h3>Estado do equipamento</h3>
+        <hr>
         <button>Histórico de estados</button>
       </div>
     </div>
     <div class="box-open-infobar">
-      <button @click="AbreInfobar" class="box-open-infobar__button">
+      <button @click="AbreInfobar"
+      class="box-open-infobar__button"
+      alt="Botão de abertura e fechamento da aba de informações dos equipamentos">
         <img src="../assets/img/seta-lado-direito.svg" class="image-arrow"/>
       </button>
     </div>
@@ -44,11 +53,14 @@ export default {
     align-items: center;
   }
   .infobar__dados{
+    display:flex;
     height: 100%;
-    background-color: rgba(235, 227, 227, 0.74);
-    padding-left: 1%;
-    border-radius: 15px 0 0 15px;
     width:90%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:0 5% 0 5%;
+    background-color: rgba(235, 227, 227, 0.74);
+    border-radius: 15px 0 0 15px;
   }
   .box-open-infobar{
     height:8%;

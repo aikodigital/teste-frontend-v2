@@ -50,7 +50,7 @@ export default {
   justify-content: center;
   width: 80%;
   height: 90%;
-  border: 1px solid #000;
+  border: 0.5px solid #000;
   border-radius:15px;
   }
 </style>
