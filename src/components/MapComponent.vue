@@ -27,7 +27,5 @@ export default {
     width: 70%;
     height: 100%;
     border-radius: 0 15px 15px 0;
-    overflow :hidden;
-    z-index: 10;
   }
 </style>
