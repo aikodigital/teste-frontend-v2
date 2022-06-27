@@ -12,7 +12,9 @@ export default {
   setup() {
     let map;
     onMounted(() => {
+      // inicia o mapa
       map = leaflet.map('map').setView([51.505, -0.09], 13);
+      // inicia montagem dos layer do mapa
       leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap',
@@ -27,6 +29,6 @@ export default {
     display: flex;
     flex: 3;
     height: 100%;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 15px 0 15px 0;
   }
 </style>
