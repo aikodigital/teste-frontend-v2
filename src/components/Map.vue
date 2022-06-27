@@ -24,7 +24,8 @@ export default {
 
 <style scoped>
   .map{
-    width: 70%;
+    display: flex;
+    flex: 3;
     height: 100%;
     border-radius: 0 15px 15px 0;
   }
