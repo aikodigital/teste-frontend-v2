@@ -3,7 +3,8 @@
     <HeaderComponent/>
     <section class="section-container">
       <main class="main">
-        <InfoBarComponent/>
+        <InfoBar  v-show="mostrar_infobar"/>
+        <ButtonComponent @abre-infobar="AbreInfobar"/>
         <MapComponent/>
       </main>
     </section>
@@ -11,16 +12,28 @@
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent.vue';
-import InfoBarComponent from './components/InfoBarComponent.vue';
-import MapComponent from './components/MapComponent.vue';
+import HeaderComponent from './components/Header.vue';
+import InfoBar from './components/InfoBar.vue';
+import MapComponent from './components/Map.vue';
+import ButtonComponent from './components/InfoBar/Button.vue';
 
 export default {
   name: 'AppTeste',
   components: {
     HeaderComponent,
-    InfoBarComponent,
+    InfoBar,
     MapComponent,
+    ButtonComponent,
+  },
+  data() {
+    return {
+      mostrar_infobar: 'Boolean',
+    };
+  },
+  methods: {
+    AbreInfobar() {
+      this.mostrar_infobar = !this.mostrar_infobar;
+    },
   },
 };
 </script>
