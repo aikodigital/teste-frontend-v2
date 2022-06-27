@@ -1,0 +1,34 @@
+<template>
+  <div class="map" id="map">
+  </div>
+</template>
+
+<script>
+import leaflet from 'leaflet';
+import { onMounted } from 'vue';
+
+export default {
+  name: 'MapComponent',
+  setup() {
+    let map;
+    onMounted(() => {
+      // inicia o mapa
+      map = leaflet.map('map').setView([51.505, -0.09], 13);
+      // inicia montagem dos layer do mapa
+      leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap',
+      }).addTo(map);
+    });
+  },
+};
+</script>
+
+<style scoped>
+  .map{
+    display: flex;
+    flex: 3;
+    height: 100%;
+    border-radius: 0 15px 0 15px 0;
+  }
+</style>
