@@ -53,4 +53,14 @@ export default {
   border: 0.5px solid #000;
   border-radius:15px;
   }
+  .infobar__dados{
+    display:flex;
+    height: 100%;
+    width:90%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:0 5% 0 5%;
+    background-color: rgba(235, 227, 227, 0.74);
+    border-radius: 15px 0 0 15px;
+  }
 </style>
