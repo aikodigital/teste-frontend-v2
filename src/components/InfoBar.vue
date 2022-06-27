@@ -1,24 +1,19 @@
 <template>
   <aside  class="infobar">
     <section  class="infobar">
-      <div class="infobar__dados">
-      <div>
-        <h2>Equipamentos</h2>
-        <hr>
-      </div>
-      <div>
-        <h2>Modelos</h2>
-        <hr>
-      </div>
-      </div>
+      <EquipmentComponent/>
     </section>
   </aside>
 </template>
 
 <script>
+import EquipmentComponent from './InfoBar/EquipamentComponent.vue';
 
 export default {
   name: 'InfoBar',
+  components: {
+    EquipmentComponent,
+  },
 };
 </script>
 
